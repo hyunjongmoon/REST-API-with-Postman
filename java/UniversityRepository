@@ -1,0 +1,55 @@
+package com.rest.DemoRest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class UniversityRepository {
+	List<University> crews;
+	
+	public UniversityRepository() {
+		crews = new ArrayList<>();
+		
+		University a1 = new University();
+		a1.setId(101);
+		a1.setName("Gwanzo");
+		a1.setPoints(60);
+		
+		University a2 = new iversity(); 
+		a2.setId(102);
+		a2.setName("Siilver9");
+		a2.setPoints(70);
+		
+		University a3 = new University(); 
+		a3.setId(103);
+		a3.setName("Elon Musk");
+		a3.setPoints(80);
+		
+		crews.add(a1);
+		crews.add(a2);
+		crews.add(a3);
+
+	}
+	
+	public List<University> getCrews(){
+		
+		return crews;
+	}
+	
+	
+	public University getCrew(int id) {
+		
+		for(University a : crews) {
+			if(a.getId()==id) {
+				return a;
+			}
+		}
+		
+		return new University();
+	}
+
+	public void create(University a1) {
+		// TODO Auto-generated method stub
+		crews.add(a1);
+	}
+}
+
